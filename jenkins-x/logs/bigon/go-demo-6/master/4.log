@@ -1,0 +1,115 @@
+
+Showing logs for build [32mbigon-go-demo-6-master-release-gkcnw-4[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-zw7gt[0m
+{"level":"warn","ts":1580393644.6916673,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1580393644.6919749,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mbigon-go-demo-6-master-release-gkcnw-4[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-mjpgm[0m
+{"level":"warn","ts":1580393645.064082,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1580393645.0648196,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mbigon-go-demo-6-master-release-gkcnw-4[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mbigon-go-demo-6-master-release-gkcnw-4[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-bigon-go-demo-6-master-release-gkcnw-5zwq5[0m
+{"level":"warn","ts":1580393651.0648038,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1580393652.7721267,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*****/go-demo-6.git @ v1.0.477 in path /workspace/source"}
+
+Showing logs for build [32mbigon-go-demo-6-master-release-gkcnw-4[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:a3359ebfab23566838ebf43a300990c83b655b81
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mbigon-go-demo-6-master-release-gkcnw-4[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mbigon-go-demo-6-master-release-gkcnw-4[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-build[0m
+go: finding github.com/davecgh/go-spew v1.1.1
+go: finding github.com/stretchr/testify v1.2.2
+go: finding github.com/beorn7/perks v0.0.0-20180321164747-3a771d992973
+go: finding github.com/golang/protobuf v1.2.0
+go: finding github.com/pmezard/go-difflib v1.0.0
+go: finding github.com/stretchr/ob** v0.1.1
+go: finding github.com/prometheus/client_model v0.0.0-20180712105110-5c3871d89910
+go: finding github.com/prometheus/client_golang v0.9.2
+go: finding github.com/matttproud/golang_protobuf_extensions v1.0.1
+go: finding gopkg.in/mgo.v2 v2.0.0-20180705113604-9856a29383ce
+go: finding github.com/prometheus/common v0.0.0-20181126121408-4724e9255275
+go: finding github.com/prometheus/procfs v0.0.0-20181204211112-1dc9a6cbc91a
+go: finding golang.org/x/sync v0.0.0-20181108010431-42b317875d0f
+go: finding golang.org/x/net v0.0.0-20181201002055-351d144fa1fc
+go: downloading gopkg.in/mgo.v2 v2.0.0-20180705113604-9856a29383ce
+go: downloading github.com/prometheus/client_golang v0.9.2
+go: extracting github.com/prometheus/client_golang v0.9.2
+go: downloading github.com/golang/protobuf v1.2.0
+go: downloading github.com/prometheus/client_model v0.0.0-20180712105110-5c3871d89910
+go: downloading github.com/beorn7/perks v0.0.0-20180321164747-3a771d992973
+go: downloading github.com/prometheus/procfs v0.0.0-20181204211112-1dc9a6cbc91a
+go: downloading github.com/prometheus/common v0.0.0-20181126121408-4724e9255275
+go: extracting github.com/beorn7/perks v0.0.0-20180321164747-3a771d992973
+go: extracting github.com/prometheus/client_model v0.0.0-20180712105110-5c3871d89910
+go: extracting gopkg.in/mgo.v2 v2.0.0-20180705113604-9856a29383ce
+go: extracting github.com/prometheus/common v0.0.0-20181126121408-4724e9255275
+go: downloading github.com/matttproud/golang_protobuf_extensions v1.0.1
+go: extracting github.com/prometheus/procfs v0.0.0-20181204211112-1dc9a6cbc91a
+go: extracting github.com/matttproud/golang_protobuf_extensions v1.0.1
+go: extracting github.com/golang/protobuf v1.2.0
+CGO_ENABLED=0 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/go-demo-6 main.go
+
+Showing logs for build [32mbigon-go-demo-6-master-release-gkcnw-4[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] No base image, nothing to extract            
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0000] Taking snapshot of full filesystem...        
+[36mINFO[0m[0000] EXPOSE 8080                                  
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] ENTRYPOINT ["/go-demo-6"]                    
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] COPY ./bin/ /                                
+[36mINFO[0m[0000] Taking snapshot of files...                  
+2020/01/30 14:14:38 pushed blob: sha256:f7306b0a640c18984e8223d0e980a58df0078952180b07cd058015f06f5557f1
+2020/01/30 14:14:39 pushed blob: sha256:b1f3ff45e14927d656b32eba3a05c78a01a82e876695225eb7c57bfdb819cdfd
+2020/01/30 14:14:39 068688312582.dkr.ecr.eu-west-1.amazonaws.com/*****/go-demo-6:1.0.477: digest: sha256:a2447c93117829c98c86c06cd33557cc3482e2b10468a2b0d1e5f5bcf7478f25 size: 428
+
+Showing logs for build [32mbigon-go-demo-6-master-release-gkcnw-4[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mbigon-go-demo-6-master-release-gkcnw-4[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/go-demo-6 to an unshallow repository
+Generating change log from git ref b7db252e30454505e5eee3a19f90d754a384c2d4 => b20eb20997402e4324932ed63e4c4cf0deb47404
+WARNING: Failed to enrich commit 1d781f89990d45d5921719dd2d0d2b2233618865 with issues: selected more than one user from users.jenkins.io: [***** x-0]
+WARNING: Failed to enrich commit 1d781f89990d45d5921719dd2d0d2b2233618865 with issues: selected more than one user from users.jenkins.io: [***** x-0]
+Finding issues in commit messages using git format
+WARNING: No release found for *****/go-demo-6 and tag v1.0.477 so creating a new release
+Updated the release information at https://github.com/*****/go-demo-6/releases/tag/v1.0.477
+generated: /workspace/source/charts/go-demo-6/templates/release.yaml
+Created Release go-demo-6-1-0-477 resource in namespace **
+Updating PipelineActivity *****-go-demo-6-master-4 with version 1.0.477
+Updated PipelineActivities *****-go-demo-6-master-4 with release notes URL: https://github.com/*****/go-demo-6/releases/tag/v1.0.477
+
+Showing logs for build [32mbigon-go-demo-6-master-release-gkcnw-4[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file go-demo-6-1.0.477.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mbigon-go-demo-6-master-release-gkcnw-4[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app go-demo-6 version 1.0.477 to namespace **-staging
+WARNING: 
+Created Pull Request: https://github.com/*****/environment-**-workshop-*****-staging/pull/8
+Added label updatebot to Pull Request https://github.com/*****/environment-**-workshop-*****-staging/pull/8
+got git provider status pending from PR https://github.com/*****/environment-**-workshop-*****-staging/pull/8
+got git provider status pending from PR https://github.com/*****/environment-**-workshop-*****-staging/pull/8
+got git provider status pending from PR https://github.com/*****/environment-**-workshop-*****-staging/pull/8
+got git provider status pending from PR https://github.com/*****/environment-**-workshop-*****-staging/pull/8
+Pull Request https://github.com/*****/environment-**-workshop-*****-staging/pull/8 is merged at sha 1555617d5b0ea4654add383e504bf0a1ba6be43c
+Pull Request merged but we are not waiting for the update pipeline to complete!
